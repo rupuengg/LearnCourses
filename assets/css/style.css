@@ -1,0 +1,42 @@
+.modal-header{
+	border-bottom:0;
+}
+.modal-footer{
+	border-top:0;
+}
+
+body > .container{
+	padding:60px 15px 0;
+}
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  height: 40px;
+  background-color: #222;
+}
+.container .text-muted {
+  margin: 10px 0;
+  font-size:14px;
+}
+
+.courses-boxes{
+	text-align: center;
+}
+.courses-boxes > p{
+	height: 100px;
+}
+.course-detail{
+	height: 290px;
+}
+
+video{
+    width:363px;
+    height:205px;
+}
+
+.sdsd{
+	border:1px solid red;
+}

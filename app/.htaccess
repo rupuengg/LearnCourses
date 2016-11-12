@@ -1,0 +1,6 @@
+<IfModule mod_rewrite.c>
+    RewriteCond %{REQUEST_FILENAME} !-f
+	RewriteCond %{REQUEST_URI} !client/
+	RewriteCond %{DOCUMENT_ROOT}/client/$1.$2 !-f
+	RewriteRule (.+)\.(html|css|json|xml|atom|rss|rdf|txt|png|jpg|jpeg|gif|)$ $1/ [L]
+</IfModule>
