@@ -1,0 +1,14 @@
+<div ng-if="showVideo">
+	<video id="video_webinar_{{video.id}}" poster="" ng-if="showVideo">
+	    <source ng-src="{{'http://localhost/test/Angular/'+video.url}}" type="video/mp4">
+	    <source ng-src="{{'http://localhost/test/Angular/'+video.url}}" type="video/ogg">
+	</video>
+	<label>{{video.title}}</label>
+</div>
+<div ng-if="!showVideo">
+	<video id="video_webinar_{{video.id}}" poster="" controls>
+	    <source ng-src="{{'http://localhost/test/Angular/'+video.url}}" type="video/mp4">
+	    <source ng-src="{{'http://localhost/test/Angular/'+video.url}}" type="video/ogg">
+	</video>
+	<label>{{video.title}}</label>
+</div>

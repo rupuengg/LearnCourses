@@ -36,7 +36,15 @@ video{
     width:363px;
     height:205px;
 }
+/*.show-large-videos video{
+  width:785px;
+  height:441px;
+}*/
 
 .sdsd{
 	border:1px solid red;
+}
+
+.error{
+  color:red;
 }

@@ -1,31 +1,36 @@
 ;(function(ng){
 	ng
-	.module('learningHereUi', ['ngRoute'])
+	.module('learningHereUi')
 	.config(['$routeProvider', '$locationProvider', function($routeProvider, $locationProvider){
 		$routeProvider
 		.when('/home', {
-			templateUrl : 'app/client/home/views/index.html',
+			templateUrl : 'app/views/home/index.html',
 			controller : 'HomeController',
 			controllerAs : 'HomeCtrl'
 		})
 		.when('/courses', {
-			templateUrl : 'app/client/courses/views/index.html',
+			templateUrl : 'app/views/courses/index.html',
 			controller : 'CoursesController',
 			controllerAs : 'CoursesCtrl'
 		})
 		.when('/about', {
-			templateUrl : 'app/client/about/views/index.html',
+			templateUrl : 'app/views/about/index.html',
 			controller : 'AboutController',
 			controllerAs : 'AboutCtrl'
 		})
 		.when('/contact', {
-			templateUrl : 'app/client/contact/views/index.html',
+			templateUrl : 'app/views/contact/index.html',
 			controller : 'ContactController',
 			controllerAs : 'ContactCtrl'
 		})
 		.when('/course/:id', {
-			templateUrl : 'app/client/courses/views/course-detail.html',
+			templateUrl : 'app/views/courses/course-detail.html',
 			controller : 'CourseController',
+			controllerAs : 'CourseCtrl'
+		})
+		.when('/courses/find', {
+			template : 'Find Course',
+			controller : 'CoursesController',
 			controllerAs : 'CourseCtrl'
 		})
 		.otherwise({ redirectTo: '/home' });

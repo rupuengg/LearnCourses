@@ -2,8 +2,11 @@
 	ng
 	.module('learningHereUi')
 	.controller('CoursesController', ['$http', '$scope', function($http, $scope){
+		selectedRequestNav('courses');
+
 		var self = this;
 		self.courses = [];
+
 		$http
 		.get('data/list_courses.json')
 		.then(function(resp){
@@ -11,6 +14,5 @@
 		}, function(resp){
 			console.log('Error occured');
 		});
-		selectedRequestNav('courses');
 	}]);
 })(window.angular);

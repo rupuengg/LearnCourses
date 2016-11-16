@@ -1,0 +1,13 @@
+<div ng-hide="showVideo" class="show-large-videos col-md-12" id="show-large-videos">
+	<div>
+		
+	</div>
+	<a ng-click="BacktoVideo()" href="javascript:;">Back</a>
+</div>
+<div class="com-md-12 course-detail" ng-show="showVideo">
+	<h1>{{course.name}}</h1>
+	<p>{{course.description}}</p>
+	<div class="col-md-4 course-detail" ng-repeat="video in course.video_list" ng-click="showCurrentVideo($index)">
+		<show-video-list></show-video-list>
+	</div>
+</div>
